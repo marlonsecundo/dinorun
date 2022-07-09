@@ -3,7 +3,7 @@ extends Node
 
 
 
-export var loopTime = 10;
+export var loopTime = 3;
 
 var time = 0;
 
@@ -23,7 +23,7 @@ func _process(delta):
 	time += delta;
 	if (time > loopTime):
 		time = 0;
-		print("FOIII")
+
 		_spawnSpikes();
 		
 		

@@ -25,6 +25,7 @@ func _physics_process(delta):
 
 	
 	_handle_input();
+	_handle_collision();
 	
 
 
@@ -32,4 +33,12 @@ func _handle_input():
 		
 	if Input.is_action_just_pressed("ui_up") && is_on_floor():
 		velocity.y = -speed.y;
+		
+
+
+func _handle_collision():
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider.is_in_group("danger"):
+			Events.emit_signal("dino_hurt")
 		
