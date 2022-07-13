@@ -19,10 +19,10 @@ func _process(delta):
 		pass
 	
 
-func _on_Spikes_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	
+func _on_Meat_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.is_in_group("dino"):
 		get_parent().remove_child(self);
-		Events.emit_signal("dino_hurt");
+		Events.emit_signal("food_colleted", Events.FOOD_TYPE_MEAT);
 		
-	pass
+		
+	pass # Replace with function body.
