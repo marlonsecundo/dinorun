@@ -4,7 +4,7 @@ extends Node
 
 
 export var spikeLoopTime = 3;
-export var meatLoopTime = 15;
+export var meatLoopTime = 13;
 
 var spikeTime = 0;
 var meatTime = 0;
